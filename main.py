@@ -25,7 +25,7 @@ for y in range(1,Y):
     ascii += '\n' 
 
 
-with open("file.html","w") as f:
+with open("index.html","w") as f:
     f.write('''
     <!DOCTYPE html>
     <html>
