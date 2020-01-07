@@ -1,3 +1,4 @@
+import sys
 from PIL import Image
 
 try: imageFile = sys.argv[1]
@@ -11,7 +12,7 @@ image = image.convert('RGB')
 def rgb2char(rgb):
     r,g,b = rgb
     avg = int((r+g+b)/3)
-    characters = '''%@#|>/;:"',. '''
+    characters = '''#@%|>/;:"',. '''
     maths = 256/len(characters)
     return characters[int(avg/maths)]*2
 
@@ -36,7 +37,7 @@ with open("index.html","w") as f:
                     margin:0;
                     font-family:"Courier New", Courier, monospace;
                     font-family: 'Roboto Mono', monospace;
-                    font-size:2px;
+                    font-size:8px;
                     white-space: pre;
                     line-height: 1.2;    
                 }
